@@ -1,15 +1,19 @@
-# Basic Template
+# OpenCloudKit Server Import JSON Feed Example
 
-A basic vapor template for starting a new Vapor web application. If you're using vapor toolbox, you can use: `vapor new --template=basic`
+This is an example Swift server project that demonstrates how to import a JSON feed into CloudKit using OpenCloudKit and Vapor. This example imports fire incidents from the [RFS NSW Major Incidents Feed
+](http://www.rfs.nsw.gov.au/feeds/majorIncidents.json).
 
-## 📖 Documentation
+## Setup
 
-Visit the Vapor web framework's [documentation](http://docs.vapor.codes) for instructions on how to use this package.
+You'll need to provide your CloudKit configuration settings with Server-to-Server auth information in the main project directory named 'cloudkit.json'. In addition to this, you will need to add your private key in the main directory named 'eckey.pem'.
 
-## 💧 Community
+### Additional required Files
+Add to main directory
+* cloudkit.json - CloudKit configuration
+* eckey.pem - Private key for signing requests
 
-Join the welcoming community of fellow Vapor developers in [slack](http://vapor.team).
+### Container Setup
 
-## 🔧 Compatibility
+In order for iCloud to accept the FireIncident records. You'll need to add the 'FireIncident' record type to your container. Use the below screenshot as a guide for the required fields.
 
-This package has been tested on macOS and Ubuntu.
+![Fire Incident Record Configuration for CloudKit](record-configuration.png)
