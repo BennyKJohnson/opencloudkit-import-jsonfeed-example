@@ -1,0 +1,8 @@
+Packages
+.build
+xcuserdata
+*.xcodeproj
+Config/secrets
+.DS_Store
+cloudkit.json
+eckey.pem
